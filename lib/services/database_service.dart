@@ -70,10 +70,10 @@ class DatabaseService {
     await db.update(
       _tasksTableName,
       {
-        _tasksStatusColumnName: status, // Correct column for status
+        _tasksStatusColumnName: status,
       },
-      where: '$_tasksIdColumnName = ?', // Use the correct column name here
-      whereArgs: [id], // Correctly pass the task id
+      where: '$_tasksIdColumnName = ?',
+      whereArgs: [id],
     );
   }
 
@@ -81,8 +81,8 @@ class DatabaseService {
     final db = await database;
     await db.delete(
       _tasksTableName,
-      where: '$_tasksIdColumnName = ?', // Use the correct column name here
-      whereArgs: [id], // Correctly pass the task id
+      where: '$_tasksIdColumnName = ?',
+      whereArgs: [id],
     );
   }
 }
